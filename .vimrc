@@ -1,5 +1,10 @@
-"let @/='book' set nocompatible              " be iMproved, required
+set nocompatible
 filetype off                  " required
+
+"setup vundle or you will get errors 
+"git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
