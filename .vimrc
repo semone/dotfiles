@@ -1,10 +1,5 @@
-set nocompatible
+"let @/='book' set nocompatible              " be iMproved, required
 filetype off                  " required
-
-"setup vundle or you will get errors 
-"git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -23,7 +18,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-
 "Vim snippets
 Plugin 'honza/vim-snippets'
 
@@ -37,6 +31,10 @@ Plugin 'morhetz/gruvbox'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'goatslacker/mango.vim'
+Plugin 'yosiat/oceanic-next-vim'
+Plugin 'ajh17/Spacegray.vim'
+Plugin 'itchyny/lightline.vim'
+Plugin 'chriskempson/base16-vim'
 "----------------------------------------------------------
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -57,7 +55,7 @@ Plugin 'goatslacker/mango.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
+" To ignore pluginn indent changes, instead use:
 "filetype plugin on
 "
 " Brief help
@@ -71,9 +69,9 @@ filetype plugin indent on    " required
 
 " syntax highlighting
 " syntax highlighting
-set background=dark     " you can use `dark` or `light` as your background
+"set background=dark     " you can use `dark` or `light` as your background
 "syntax on
-colorscheme gruvbox
+colorscheme base16-ocean
 
 set tabstop=4
 set shiftwidth=4
@@ -195,4 +193,9 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+endif
+"Set gui window to fullscreen when opening
+if has("gui_running")
+	set lines=999
+	set columns=999
 endif
